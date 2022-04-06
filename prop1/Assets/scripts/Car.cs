@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Car : MonoBehaviour
 {
     //cache?
@@ -52,5 +52,9 @@ public class Car : MonoBehaviour
             transform.position = new Vector2 (2f,transform.position.y);
             currentLane = 2;
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+SceneManager.LoadScene("end menu");
     }
 }
