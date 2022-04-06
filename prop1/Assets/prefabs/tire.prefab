@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6017055898321983876}
   - component: {fileID: 1935307256389296946}
   - component: {fileID: -3047182630672620809}
+  - component: {fileID: 1199917254328309502}
   m_Layer: 0
   m_Name: tire
   m_TagString: Untagged
@@ -120,3 +121,15 @@ CircleCollider2D:
   m_Offset: {x: 0.0058367252, y: 0}
   serializedVersion: 2
   m_Radius: 1.2223704
+--- !u!114 &1199917254328309502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267151016485823410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c78c4c2d145b473aa8b3cd081974675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
