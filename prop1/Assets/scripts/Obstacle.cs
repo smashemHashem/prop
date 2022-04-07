@@ -12,7 +12,7 @@ public class Fruit : MonoBehaviour
     //add prefabs for obstacle spawning in inspector adds to list
 [SerializeField] GameObject[] obstaclePrefab;
     //how often obstacle spawns in seconds 
-[SerializeField]float  SecondSpawn = 0.5f;
+ [SerializeField] public float  secondSpawn = 0.5f;
 
 //state variable????
 //magic fix for method
@@ -29,6 +29,10 @@ public class Fruit : MonoBehaviour
         // GameObject gameObject = Instantiate(obstaclePrefab[Random.Range(0, obstaclePrefab.Length)], position, Quaternion.identity);
 
     }
+    void Update()
+    {
+        randomSpawn();
+    }
 
     // Update is called once per frame
 
@@ -36,7 +40,7 @@ public class Fruit : MonoBehaviour
     
     IEnumerator ObstacleSpawn() 
     { 
-        yield return new WaitForSeconds(SecondSpawn);
+        yield return new WaitForSeconds(secondSpawn);
 
         int i = Random.Range(1,4);
         if(i == 1)
@@ -51,11 +55,11 @@ public class Fruit : MonoBehaviour
         {
              wanted = 2f;
         }
+        
         // var wanted = Random.Range(min, max); // TODO: set min/max values correctly
         var position = new Vector3(wanted, transform.position.y);
         GameObject gameObject = Instantiate(obstaclePrefab[Random.Range(0, obstaclePrefab.Length)], position, Quaternion.identity);
         StartCoroutine(ObstacleSpawn());
-
 
     //     while(true)
     //     // {  int i = Random.Range(1,4);
@@ -81,6 +85,28 @@ public class Fruit : MonoBehaviour
     //         Destroy(gameObject, 5f);
            
     //     }
+      }
+      
+      void randomSpawn()
+      {
+         int randomNumber = Random.Range(1,5);
+         if(randomNumber == 1)
+         {
+             secondSpawn = 0.5f;
+         }
+         else if(randomNumber == 2)
+         {
+             secondSpawn = 0.6f;
+         }
+         else if(randomNumber == 3)
+         {
+             secondSpawn = 0.75f;
+         }
+         else if(randomNumber == 4)
+         {
+             secondSpawn = 0.85f;
+         }
+         Debug.Log(randomNumber);
       }
     }
 

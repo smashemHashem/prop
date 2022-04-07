@@ -29,6 +29,7 @@ public class GameStatus : MonoBehaviour
         Time.timeScale = gameSpeed;
         AddToScore();
         gameIncrease();
+       // randomSpawn();
     }
     public void AddToScore()
     {
@@ -43,4 +44,25 @@ public class GameStatus : MonoBehaviour
              scoreSpeedMultiplier += scoreSpeedMultiplier;
          }
     }
+    // void randomSpawn()
+    //   {
+    //      int randomNumber = Random.Range(1,5);
+    //      if(randomNumber == 1)
+    //      {
+    //          Obstacle.secondSpawn = 0.5f;
+    //      }
+    //      else if(randomNumber == 2)
+    //      {
+    //          Obstacle.secondSpawn = 0.6f;
+    //      }
+    //      else if(randomNumber == 3)
+    //      {
+    //          Obstacle.secondSpawn = 0.75f;
+    //      }
+    //      else if(randomNumber == 4)
+    //      {
+    //          Obstacle.secondSpawn = 0.85f;
+    //      }
+    //      Debug.Log(randomNumber);
+    //   }
 }
