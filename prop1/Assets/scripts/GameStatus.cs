@@ -8,6 +8,13 @@ public class GameStatus : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     float currentScore = 0;
     float scoreIncrease = 10;
+    [SerializeField] int scoreSpeedMultiplier = 10;
+    void Start()
+    {
+        
+        scoreText.text = currentScore.ToString();
+        
+    }
     // Start is called before the first frame update
     // void Start()
     // {
@@ -20,5 +27,20 @@ public class GameStatus : MonoBehaviour
     void Update()
     {
         Time.timeScale = gameSpeed;
+        AddToScore();
+        gameIncrease();
+    }
+    public void AddToScore()
+    {
+        currentScore = currentScore + Time.deltaTime;
+        scoreText.text = Mathf.RoundToInt(currentScore).ToString();
+    }
+    public void gameIncrease()
+    {
+         if(currentScore >= scoreSpeedMultiplier)
+         {
+             gameSpeed += 0.15f;
+             scoreSpeedMultiplier += scoreSpeedMultiplier;
+         }
     }
 }

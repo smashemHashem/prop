@@ -293,7 +293,7 @@ MonoBehaviour:
   - {fileID: 6267151016485823410, guid: f8155cbc4616010419c0bc9226042957, type: 3}
   - {fileID: 7721179751476751245, guid: c21df9c7a66717b46b1ac69c8d50a191, type: 3}
   - {fileID: 7548980619639652207, guid: d84049bc422096841923e9e7725b511a, type: 3}
-  SecondSpawn: 0.5
+  SecondSpawn: 0.75
 --- !u!4 &284885516
 Transform:
   m_ObjectHideFlags: 0
@@ -328,7 +328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &478541202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,6 +482,18 @@ PolygonCollider2D:
       - {x: 0.9, y: -2.01}
       - {x: 0.94, y: 0.62}
       - {x: 1.13, y: 0.61}
+--- !u!114 &900832317 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9198417870250357866, guid: 68c0789922cb5ca46a30d58f7246624c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1981393242}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1000737592
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,8 +569,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000737592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.43, y: -0.74, z: 4}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 3.3, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -592,8 +604,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5016c1e3f124af29c4985c13321b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSpeed: 1.32
-  scoreText: {fileID: 1231683241}
+  gameSpeed: 0.4
+  scoreText: {fileID: 900832317}
+  scoreSpeedMultiplier: 1
 --- !u!4 &1161479021
 Transform:
   m_ObjectHideFlags: 0
@@ -608,18 +621,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1231683241 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4611150523543955240, guid: 68c0789922cb5ca46a30d58f7246624c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1981393242}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1295838117
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,11 +758,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4611150523692693454, guid: 68c0789922cb5ca46a30d58f7246624c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4611150523692693458, guid: 68c0789922cb5ca46a30d58f7246624c,
         type: 3}
